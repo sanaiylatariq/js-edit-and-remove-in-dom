@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: black;color: white;">
+    <ul class="language">
+        <li>javascript</li>
+    </ul>
+    <div></div>
+    <div class="headings">
+        <h1>heading</h1>
+
+    </div>
+    <script>
+
+let addone = function(langname){
+ let li = document.createElement('li') 
+li.innerHTML = `${langname}`
+document.querySelector('.language').appendChild(li)
+
+}
+addone("replaced")
+let li2 = document.createElement('li')
+li2.innerHTML = "java"
+
+
+
+let li = document.createElement('li')
+li.innerHTML = "changed"
+document.querySelector('.language').appendChild(li)
+li2.replaceWith(li)
+
+
+
+let addlang = function(langname){
+    let li = document.createElement('li')
+    li.appendChild(document.createTextNode(langname))
+    document.querySelector('.language').appendChild(li)
+
+}
+addlang("cpp")
+addlang("flutter")
+
+let hea = function(text){
+    let h1 = document.createElement('h1')
+    h1.appendChild(document.createTextNode(text))
+    document.querySelector('.headings').appendChild(h1)
+}
+hea("heading no 1")
+
+
+
+let h11 = document.createElement('h1')
+console.log(h11);
+// do log whenever confused
+h11.textContent = "replaced2 lang"
+let h1 = document.createElement('h1')
+
+h1.textContent = "replaced lang"
+document.querySelector('.headings').appendChild(h11)
+h1.replaceWith(h11)
+
+//  many ways to replace things
+let chamge = document.querySelector('li:first-child')
+chamge.innerHTML = "sanaiyla"
+
+const new1 = document.createElement('li')
+new1.replaceWith(chamge)
+
+console.log(chamge);
+
+// es trh ap ny javascript ko sanaiyla main change krdea
+
+
+
+
+let lastlang = document.querySelector('li:last-child')
+lastlang.remove()
+//  way to remove
+</script>
+
+</body>
+</html>
